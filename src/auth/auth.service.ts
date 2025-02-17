@@ -1,4 +1,9 @@
-import { Injectable, ConflictException, InternalServerErrorException, UnauthorizedException, Logger } from "@nestjs/common";
+import {
+    Injectable,
+    ConflictException,
+    InternalServerErrorException,
+    UnauthorizedException,
+} from "@nestjs/common";
 import { UserService } from "src/user/user.service";
 import type { AuthDto } from "./dto/auth.dto";
 import { JwtService } from "@nestjs/jwt";
@@ -8,35 +13,36 @@ export class AuthService {
     constructor(
         private readonly userService: UserService,
         private readonly jwtService: JwtService,
-    ) { }
-    
+    ) {}
+
     async registration(authDto: AuthDto) {
         try {
-    
             const hasUser = await this.userService.getByEmail(authDto.email);
             if (hasUser) {
-                throw new ConflictException("User with this email already exists");
+                throw new ConflictException(
+                    "User with this email already exists",
+                );
             }
             const user = await this.userService.createUser(authDto);
             return this.generateTokens(user.id);
-        } catch (error) {
+        } catch {
             throw new InternalServerErrorException("Registration failed");
         }
     }
 
     async login(authDto: AuthDto) {
         try {
-            const user = await this.userService.getByEmail(authDto.email);
+            const user = await this.userService.verifyUser(authDto);
             if (!user) {
-                throw new UnauthorizedException("Invalid credentials");
+                throw new UnauthorizedException("Authenfication error");
             }
             return this.generateTokens(user.id);
-        } catch (error) {
+        } catch {
             throw new InternalServerErrorException("Login failed");
         }
     }
-    
-    generateTokens(id: string) { 
+
+    generateTokens(id: string) {
         try {
             const payload = { id };
             const accessToken = this.jwtService.sign(payload, {
@@ -49,7 +55,7 @@ export class AuthService {
                 accessToken,
                 refreshToken,
             };
-        } catch (error) {
+        } catch {
             throw new InternalServerErrorException("Token generation failed");
         }
     }
