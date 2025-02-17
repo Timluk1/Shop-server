@@ -1,11 +1,11 @@
 import { Controller, Get } from "@nestjs/common";
-import { products } from "./dto/products.dto";
-import type { IProduct } from "./dto/products.dto";
+import { ProductsService } from "./products.service";
 
 @Controller("products")
 export class ProductsController {
+    constructor(private readonly productsSerivce: ProductsService) {}
     @Get()
-    findAll(): IProduct[] {
-        return products;
+    findAll() {
+        return this.productsSerivce.getProducts();
     }
 }

@@ -9,7 +9,7 @@ import { UserModule } from "./user/user.module";
 @Module({
     imports: [
         ServeStaticModule.forRoot({
-            rootPath: join(__dirname, "..", "images"),
+            rootPath: join(__dirname, "../../", "images"),
             serveRoot: "/api/images",
         }),
         ConfigModule.forRoot({

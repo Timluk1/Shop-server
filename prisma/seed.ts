@@ -21,9 +21,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -33,9 +33,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -45,9 +45,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -57,9 +57,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -69,9 +69,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -81,9 +81,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -93,9 +93,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -105,9 +105,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -117,9 +117,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -129,9 +129,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -141,9 +141,9 @@ const products = [
         fullDescription:
             "Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
         images: [
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
-            "http://localhost:3000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
+            "http://localhost:4000/api/images/image.png",
         ],
         price: 10_000,
     },
@@ -151,7 +151,9 @@ const products = [
 
 async function main() {
     console.log("Seeding database...");
-
+    await prisma.product.deleteMany();
+    await prisma.category.deleteMany();
+    await prisma.tag.deleteMany();
     // Создание категорий
     const categoryIds = await Promise.all(
         categories.map((category) =>
