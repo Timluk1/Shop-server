@@ -7,6 +7,7 @@ import {
 import { UserService } from "src/user/user.service";
 import type { AuthDto } from "./dto/auth.dto";
 import { JwtService } from "@nestjs/jwt";
+import type { IAuth } from "./auth.types";
 
 @Injectable()
 export class AuthService {
@@ -15,34 +16,33 @@ export class AuthService {
         private readonly jwtService: JwtService,
     ) {}
 
-    async registration(authDto: AuthDto) {
+    async registration(authDto: AuthDto): Promise<IAuth> {
+        const hasUser = await this.userService.getByEmail(authDto.email);
+        if (hasUser) {
+            throw new ConflictException("User with this email already exists");
+        }
+        const user = await this.userService.createUser(authDto);
+        return this.generateTokens(user.id);
+    }
+
+    async login(authDto: AuthDto): Promise<IAuth> {
+        const user = await this.userService.verifyUser(authDto);
+        if (!user) {
+            throw new UnauthorizedException("Authenfication error");
+        }
+        return this.generateTokens(user.id);
+    }
+
+    async updateAccess(refreshToken: string): Promise<IAuth> {
         try {
-            const hasUser = await this.userService.getByEmail(authDto.email);
-            if (hasUser) {
-                throw new ConflictException(
-                    "User with this email already exists",
-                );
-            }
-            const user = await this.userService.createUser(authDto);
+            const user = this.jwtService.verify(refreshToken);
             return this.generateTokens(user.id);
         } catch {
-            throw new InternalServerErrorException("Registration failed");
+            throw new UnauthorizedException("Authenfication error");
         }
     }
 
-    async login(authDto: AuthDto) {
-        try {
-            const user = await this.userService.verifyUser(authDto);
-            if (!user) {
-                throw new UnauthorizedException("Authenfication error");
-            }
-            return this.generateTokens(user.id);
-        } catch {
-            throw new InternalServerErrorException("Login failed");
-        }
-    }
-
-    generateTokens(id: string) {
+    generateTokens(id: string): IAuth {
         try {
             const payload = { id };
             const accessToken = this.jwtService.sign(payload, {
